@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+img{
+    height: 330px;
+    width: 330px;
+    margin-top: 70px;
+    margin-left: 100px;
+    background-image: url('./Asset 2.png');
+}
+.subdiv{
+    color: rgb(185, 179, 179);
+    display: flex;
+    margin: 10px 45px ;
+    font-family:'Comfortaa', cursive;
+}
+.log{
+    padding:30px;
+    color: rgb(185, 179, 179);
+    border-bottom: solid rgb(185, 179, 179);
+    padding-bottom: 3px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.reg{
+    padding:30px;
+    color: rgb(185, 179, 179);
+    border-bottom: solid rgb(185, 179, 179);
+    padding-bottom: 3px;
+    cursor: pointer;
+    text-decoration: none; 
+
+}
+a.active{
+    color:rgb(54,71,76);
+    border-bottom: solid rgb(54,71,76)
+}
+.cont{
+    width: 660px;
+    height: fit-content;
+    color: white;
+    margin-left: 100px;
+    font-family:'Comfortaa', cursive;
+}
+.box2{
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 8px;
+    margin-right: 80px;
+    margin-top: 70px;
+}
+.box{
+    height:fit-content;
+    width:100%;
+    box-sizing: border-box;
+    
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+@media only screen and (max-width:1024px){
+}
+@media only screen and (max-width:768px){
+}
+@media only screen and (max-width:640px){
+}
+@media only screen and (max-width:300px){
+}
+  

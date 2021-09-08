@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" #userPost="ngForm">
+        <label for="name" class="lab">Full Name</label>
+        <input type="text" class="inpu"  formControlName="name">
+        <span *ngIf="errorMsg().name.invalid && errorMsg().name.touched">Please enter your name</span>
+
+        <label for="email" class="lab">Email/Mobile Number</label>
+        <input type="email" class="inpu" formControlName="email"  >
+        <span *ngIf="errorMsg().email.invalid && errorMsg().email.touched">Please enter your email</span>
+
+        <label for="number" class="lab">Mobile Number</label>
+        <input type="number" class="inpu" formControlName="number"  >
+        <span *ngIf="errorMsg().number.invalid && errorMsg().number.touched">Please enter your No</span>
+
+        <label for="gen" class="lab">Gender</label>
+        <input type="text" class="inpu" required formControlName="gender" >
+        <span *ngIf="errorMsg().gender.invalid && errorMsg().gender.touched">Please enter your Gender</span>
+
+        <label for="pass" class="lab">Password</label>
+        <input type="password" class="inpu" formControlName="password" >
+        <span *ngIf="errorMsg().password.invalid && errorMsg().password.touched">Please enter Password of 6 digit</span>
+        
+        <label for="confirmPass" class="lab">Password</label>
+        <input type="password" class="inpu" formControlName="password" >
+        <span *ngIf="errorMsg().password.invalid && errorMsg().password.touched">Please enter correct Password</span>
+        <div class="btnd">
+            <button class="btn" [disabled]="userPost.form.invalid">Register</button>
+        </div>
+        <div class="reg">
+            <a class="reg" routerLink="/" routerLinkActive="active">Already a member? <b>Login</b></a>
+        </div>
+    </form>
+</div>

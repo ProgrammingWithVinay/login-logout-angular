@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+.container{
+    font-family:'Comfortaa', cursive;
+    color: rgb(54,71,76);
+    margin: 0px 45px;
+
+}
+span{
+    color: red;
+    font-size: 12px;
+}
+.lab{
+    display: block;
+    font-size: 11px;
+    padding-bottom: 5px;
+    margin-top: 14px;
+    color: rgb(54,71,76);
+}
+.inpu{
+    padding: 8px 5px;
+    border-radius: 8px;
+    width: 100%;
+    color: rgb(54,71,76);
+}
+
+.btn{
+    color: white;
+    background-color: rgb(72,88,103);
+    margin-top:38px;
+    padding: 13px 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+.btnd{
+    text-align: center;
+}
+.reg{
+    font-size: 11px;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(54,71,76);
+    cursor: pointer;
+}

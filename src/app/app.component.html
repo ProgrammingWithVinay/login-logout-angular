@@ -1,0 +1,22 @@
+<div class="container" *ngIf="active">
+    <div class="box">
+        <img src="./Asset 2.png" alt="Image Loading">
+        <div class="cont">
+            <h1>Welcome!</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, sit obcaecati ab repellendus eaque
+                dignissimos omnis. Quia consequuntur assumenda quam recusandae officiis neque vel, atque, dolores,
+                incidunt
+                amet omnis doloribus nam? Repudiandae soluta praesentium enim rerum voluptate molestiae earum
+                exercitationem
+                temporibus dicta voluptatum.</p>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="subdiv">
+            <a class="log" routerLink="login" routerLinkActive="active">Login</a>
+            <a class="reg" routerLink="/regiser" routerLinkActive="active">Register</a>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-home *ngIf="home"></app-home>

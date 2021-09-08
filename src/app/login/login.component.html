@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="loginForm" #userPost="ngForm" (ngSubmit)="onSubmit(userPost)">
+        <label for="email" class="lab">Email/Mobile Number</label>
+        <input type="email" class="inpu" name="email" formControlName="email" >
+        <span *ngIf="f.email.invalid && f.email.touched">Please enter email</span>
+
+        <label for="password" class="lab">Password</label>
+        <input type="password" class="inpu" formControlName="password" name="password">
+        <span *ngIf="f.password.invalid && f.password.touched">Please enter correct password</span>
+
+        <div class="pass">
+            <a class="forget">Forget Password</a>
+        </div>
+        <div class="btnd">
+            <button class="btn" type="submit" [disabled]="userPost.form.invalid">LOGIN</button>
+            <span *ngIf="userPost.form.invalid && userPost.form.touched ">Fill the required fields</span>
+        </div>
+        <div class="reg">
+            <a class="reg" routerLink="/regiser" routerLinkActive="active">Not a member yet? <b>Register</b></a>
+        </div>
+    </form>
+</div>
