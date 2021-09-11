@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   regUser(user:any){
     let UserArray = [];
@@ -25,4 +26,11 @@ export class UserService {
     }
     localStorage.setItem('Users',JSON.stringify(UserArray))
   }
+
+  createUser(user:any){
+    return this.http.post("https://reqres.in/api/login",user);
+  }
+  login(email:string, password:string ) {
+    return this.http.post('https://reqres.in/api/login', {email, password})
+}
 }

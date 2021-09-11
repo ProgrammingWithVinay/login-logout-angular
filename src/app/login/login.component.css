@@ -3,8 +3,11 @@
 .container{
     font-family:'Comfortaa', cursive;
     color: rgb(54,71,76);
-    margin: 70px 45px;
-
+    margin: 55px 10px;
+    padding: 5px 20px;
+}
+.pass{
+    box-sizing: border-box;
 }
 span{
     color: red;
@@ -18,7 +21,7 @@ span{
     color: rgb(54,71,76);
 }
 .inpu{
-    padding: 8px 5px;
+    padding: 6px 3px;
     border-radius: 8px;
     width: 100%;
     color: rgb(54,71,76);
@@ -32,10 +35,16 @@ span{
 .btn{
     color: white;
     background-color: rgb(72,88,103);
-    margin-top:58px;
+    margin:58px auto 8px auto;
     padding: 13px 60px;
     border-radius: 8px;
+    display: block;
     cursor: pointer;
+    
+}
+.btn:hover{
+    animation: ease-in-out;
+    animation-duration: 2000ms;
 }
 .btnd{
     text-align: center;
@@ -46,40 +55,5 @@ span{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    color: rgb(54,71,76);;
-}
-@media (max-width:420px){
-    .container{
-        color: rgb(54,71,76);
-        margin: 0px 0px;
-    
-    }
-    .lab{
-        display: block;
-        font-size: 8px;
-        padding-bottom: 7px;
-        margin-top: 15px;
-        
-    }
-    .inpu{
-        padding: 4px 3px;
-        border-radius: 5px;
-        width: 80%;
-    }
-    .forget{
-        font-size: 8px;
-        margin-top: 4px;
-    }
-    .btn{
-        color: white;
-        background-color: rgb(72,88,103);
-        margin-top:28px;
-        padding: 8px 30px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-    .reg{
-        font-size: 8px;
-        padding-top: 8px;
-    }
+    color: rgb(54,71,76);
 }

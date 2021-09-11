@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" #userPost="ngForm">
+    <form [formGroup]="registrationForm" (ngSubmit)="userPost.valid && onSubmit()" #userPost="ngForm">
         <label for="name" class="lab">Full Name</label>
         <input type="text" class="inpu"  formControlName="name">
         <span *ngIf="errorMsg().name.invalid && errorMsg().name.touched">Please enter your name</span>
@@ -17,14 +17,18 @@
         <span *ngIf="errorMsg().gender.invalid && errorMsg().gender.touched">Please enter your Gender</span>
 
         <label for="pass" class="lab">Password</label>
-        <input type="password" class="inpu" formControlName="password" >
+        <input type="password" class="inpu" formControlName="password" id="pass">
         <span *ngIf="errorMsg().password.invalid && errorMsg().password.touched">Please enter Password of 6 digit</span>
         
-        <label for="confirmPass" class="lab">Password</label>
-        <input type="password" class="inpu" formControlName="password" >
-        <span *ngIf="errorMsg().password.invalid && errorMsg().password.touched">Please enter correct Password</span>
+        <label for="confirmPass" class="lab" >Confirm password</label>
+        <input type="password" class="inpu" id="cpass" formControlName="confirmPass" oninput="wrongpass()">
+
+        <span *ngIf="errorMsg().confirmPass.invalid && errorMsg().confirmPass.touched">Please enter correct Password</span>
+
+        <span *ngIf="errorMsg().confirmPass.touched && wrongpass()">Password does not match</span>
+        
         <div class="btnd">
-            <button class="btn" [disabled]="userPost.form.invalid">Register</button>
+            <button class="btn"[disabled]="userPost.form.invalid">Register</button>
         </div>
         <div class="reg">
             <a class="reg" routerLink="/" routerLinkActive="active">Already a member? <b>Login</b></a>
